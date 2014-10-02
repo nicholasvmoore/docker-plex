@@ -5,9 +5,11 @@ Wants=docker.service
 
 [Service]
 TimeoutStartSec=0
+Restart=always
 ExecStartPre=-/usr/bin/docker kill plex
 ExecStartPre=-/usr/bin/docker rm plex
 ExecStart=/usr/bin/docker run -v /mnt/lun0/media:/media:ro -v /mnt/lun0/software/docker/plex:/var/lib/plexmediaserver/:rw --name="plex" -p 32400:32400 plex
+ExecStop=/usr/bin/docker stop plex
 
 [Install]
 WantedBy=multi-user.service
