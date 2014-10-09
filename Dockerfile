@@ -1,3 +1,7 @@
+# Plex
+#
+# Version: 0.0.5
+
 FROM fedora:20
 MAINTAINER Nicholas Moore
 
