@@ -10,7 +10,8 @@ VOLUME /media
 
 ADD ./start.sh /start.sh
 
-RUN rpm -ivh --force https://downloads.plex.tv/plex-media-server/0.9.11.1.678-c48ffd2/plexmediaserver-0.9.11.1.678-c48ffd2.x86_64.rpm
+RUN cp /usr/share/zoneinfo/US/Pacific /etc/localtime;\
+    rpm -ivh --force https://downloads.plex.tv/plex-media-server/0.9.11.1.678-c48ffd2/plexmediaserver-0.9.11.1.678-c48ffd2.x86_64.rpm
 
 EXPOSE 32400
 
