@@ -1,6 +1,6 @@
 # Plex
 #
-# Version: 0.0.6
+# Version: 0.0.7
 
 FROM fedora:20
 MAINTAINER Nicholas Moore
@@ -11,7 +11,7 @@ VOLUME /media
 ADD ./start.sh /start.sh
 
 RUN cp /usr/share/zoneinfo/US/Pacific /etc/localtime;\
-    rpm -ivh --force https://downloads.plex.tv/plex-media-server/0.9.11.1.678-c48ffd2/plexmediaserver-0.9.11.1.678-c48ffd2.x86_64.rpm
+    rpm -ivh --force https://downloads.plex.tv/plex-media-server/0.9.11.4.739-a4e710f/plexmediaserver-0.9.11.4.739-a4e710f.x86_64.rpm
 
 EXPOSE 32400
 
