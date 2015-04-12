@@ -12,7 +12,7 @@ If you wish to connect to the plex using an android client. You can go into the 
 Build from Dockerfile
 ```bash
 https://github.com/nicholasvmoore/docker-plex.git
-docker build -t plex $PWD/docker/plex/.
+docker build -t plex $PWD/docker-plex/.
 ```
 
 Example Usage
