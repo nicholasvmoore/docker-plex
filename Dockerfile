@@ -1,8 +1,8 @@
 # Plex
 #
-# Version: 0.0.7
+# Version: 0.0.8
 
-FROM fedora:20
+FROM fedora:21
 MAINTAINER Nicholas Moore
 
 VOLUME /var/lib/plexmediaserver/
