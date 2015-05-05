@@ -1,0 +1,16 @@
+[Unit]
+Description=Announce plex
+BindsTo=plex.service
+After=plex.service
+
+[Service]
+ExecStart=/bin/sh -c "while true; do \
+          /usr/bin/etcdctl set /production/plex/host %H.pdx4.rlgeex.net --ttl 60; \
+          /usr/bin/sleep 45; \
+          done"
+ExecStop=/usr/bin/etcdctl rm /production/plex/host; \
+         /usr/bin/etcdctl rm /production/plex/port
+
+[X-Fleet]
+MachineOf=plex.service
+

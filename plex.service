@@ -19,3 +19,6 @@ ExecStop=/usr/bin/docker stop plex
 
 [Install]
 WantedBy=multi-user.target
+
+[X-Fleet]
+Conflicts=plex*
