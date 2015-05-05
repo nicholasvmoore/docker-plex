@@ -22,3 +22,4 @@ WantedBy=multi-user.target
 
 [X-Fleet]
 Conflicts=plex*
+MachineMetadata=cores=4
