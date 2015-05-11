@@ -9,8 +9,6 @@ ExecStart=/bin/sh -c "while true; do \
           /usr/bin/sleep 45; \
           done"
 ExecStop=/usr/bin/etcdctl rm /production/plex/host; \
-         /usr/bin/etcdctl rm /production/plex/port
 
 [X-Fleet]
 MachineOf=plex.service
-
