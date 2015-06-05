@@ -14,6 +14,7 @@ TimeoutStartSec=0
 Restart=always
 ExecStartPre=-/usr/bin/docker kill plex
 ExecStartPre=-/usr/bin/docker rm plex
+ExecStartPre=-/usr/bin/rm /mnt/lun0/software/docker/plex:/var/lib/plexmediaserver/plexmediaserver.pid
 ExecStart=/usr/bin/docker run --rm -v /mnt/lun0/media:/media:ro -v /mnt/lun0/software/docker/plex:/var/lib/plexmediaserver/:rw --name="plex" --net=host nicholasvmoore/docker-plex
 ExecStop=/usr/bin/docker stop plex
 
