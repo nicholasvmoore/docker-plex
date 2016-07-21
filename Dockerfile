@@ -11,7 +11,7 @@ VOLUME /media
 ADD ./start.sh /start.sh
 
 RUN cp /usr/share/zoneinfo/US/Pacific /etc/localtime;\
-    dnf -ivh --force https://downloads.plex.tv/plex-media-server/1.0.0.2261-a17e99e/plexmediaserver-1.0.0.2261-a17e99e.x86_64.rpm
+    rpm -ivh --force https://downloads.plex.tv/plex-media-server/1.0.0.2261-a17e99e/plexmediaserver-1.0.0.2261-a17e99e.x86_64.rpm
 EXPOSE 32400
 
 ENTRYPOINT ["/start.sh"]
